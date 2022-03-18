@@ -30,6 +30,7 @@ public class ReqFilter extends OncePerRequestFilter {
 
         if (callingService == null) callingService = "Self";
 
+        request.setAttribute(TRACER, tracer);
 
         log.info("In service service1 for request {} with tracer {}, calling service {}", request.getRequestURL(), tracer, callingService);
 

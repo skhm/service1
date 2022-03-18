@@ -23,7 +23,7 @@ public class Service1Controller {
 
     @GetMapping(path = "/hello")
     public ResponseEntity<String> sayHello(HttpServletRequest request) {
-        service.callOtherServices();
+        service.callOtherServices(request);
         return ResponseEntity.ok("Hello");
     }
 
